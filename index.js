@@ -9,6 +9,7 @@
 
 var Promise = require('bluebird');
 const fs = require('fs');
+const PORT = process.env.PORT || 8080;
 
 const args = require('minimist')(process.argv.slice(2), {
     boolean: ['help'],
@@ -19,7 +20,7 @@ const args = require('minimist')(process.argv.slice(2), {
         folder: ['directory', 'd', 'f']
     },
     "default": {
-        port: 8080,
+        port: PORT,
         folder: 'Journal'
     }
 });
@@ -29,11 +30,12 @@ if (args.help) {
   Example usage
     $ journal-server <options>
 
-
   Options
     --help, -h                     Print this help
-    --port, -p                     Port to run the server (defaults to 8080)
+    --port, -p                     Port to run the server (defaults to ${PORT})
     --folder, -f, --directory, -d  Directory to serve, defaults to ./Journal
+
+  If no port is specified, it will use the PORT environment variable, or 8080 otherwise.
     `);
     process.exit();
 }
