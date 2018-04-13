@@ -26,7 +26,11 @@ Modify the `package.json` by adding the following:
 }
 ```
 
-Replace `Journal` with the name of the directory to be served. You can also add a port to serve it on with `-p PORT`. Without, it will use 8080.
+Replace `Journal` with the name of the directory to be served.
+
+You can also add a port to serve it on with `-p PORT`. Without, it will use the `PORT` environment variable, or lackking that, 8080.
+
+The server also supports authorization through a Bearer token. It only supports using a single token. This can be specified on the command-line using the `-t` command-line switch, or by setting the `BEARER_TOKEN` environment variable. If neither of these are set, there will be no authorization check, meaning anybody will have access.
 
 Next, run `npm start` to start the server.
 
