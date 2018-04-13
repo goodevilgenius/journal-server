@@ -1,6 +1,6 @@
 {
   "name": "journal-server",
-  "version": "0.0.1",
+  "version": "0.1",
   "description": "A serer for journal files created by DropLogger",
   "main": "index.js",
   "repository": "https://github.com/goodevilgenius/journal-server",
