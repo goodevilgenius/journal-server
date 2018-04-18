@@ -32,6 +32,8 @@ You can also add a port to serve it on with `-p PORT`. Without, it will use the 
 
 The server also supports authorization through a Bearer token. It only supports using a single token. This can be specified on the command-line using the `-t` command-line switch, or by setting the `BEARER_TOKEN` environment variable. If neither of these are set, there will be no authorization check, meaning anybody will have access.
 
+If CORS support is required (it probably is), you can enable it by passing the `-c` flag, or by setting the `CORS` environment variable to a non-empty value.
+
 Next, run `npm start` to start the server.
 
 You can deploy just about anywhere.

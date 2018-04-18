@@ -1,6 +1,6 @@
 {
   "name": "journal-server",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A serer for journal files created by DropLogger",
   "main": "index.js",
   "repository": "https://github.com/goodevilgenius/journal-server",
@@ -9,6 +9,7 @@
   "bin": "index.js",
   "dependencies": {
     "bluebird": "^3.5.1",
+    "cors": "^2.8.4",
     "express": "^4.16.3",
     "minimist": "^1.2.0"
   }
