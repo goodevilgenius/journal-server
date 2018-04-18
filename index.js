@@ -12,11 +12,12 @@ const fs = require('fs');
 const PORT = process.env.PORT || 8080;
 
 const args = require('minimist')(process.argv.slice(2), {
-    boolean: ['help'],
+    boolean: ['help', 'cors'],
     string: ['port', 'folder', 'token'],
     alias: {
         help: ['h'],
         port: ['p'],
+        cors: ['c'],
         token: ['t'],
         folder: ['directory', 'd', 'f']
     },
@@ -37,6 +38,7 @@ if (args.help) {
     --port, -p                     Port to run the server (defaults to ${PORT})
     --folder, -f, --directory, -d  Directory to serve, defaults to ./Journal
     --token, -t                    Bearer token to check from header
+    --cors, -c                     Enable CORS
 
   If no port is specified, it will use the PORT environment variable, or 8080 otherwise.
 
@@ -48,6 +50,10 @@ if (args.help) {
 const express = require('express');
 const app = express();
 const readdir = Promise.promisify(fs.readdir);
+
+if (process.env.CORS || args.cors) {
+    app.use(require('cors')({credentials: true}));
+}
 
 if (args.token) {
     app.use(function(req, res, next) {
