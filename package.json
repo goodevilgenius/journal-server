@@ -1,9 +1,9 @@
 {
   "name": "journal-server",
-  "version": "0.2.0",
-  "description": "A serer for journal files created by DropLogger",
+  "version": "0.2.2",
+  "description": "A server for journal files created by DropLogger",
   "main": "index.js",
-  "repository": "https://github.com/goodevilgenius/journal-server",
+  "repository": "https://gitlab.com/danjones000/journal-server",
   "author": "Dan Jones <danjones@goodevilgenius.org>",
   "license": "MIT",
   "bin": "index.js",
