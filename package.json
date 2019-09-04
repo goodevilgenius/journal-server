@@ -1,16 +1,16 @@
 {
   "name": "journal-server",
-  "version": "0.2.0",
-  "description": "A serer for journal files created by DropLogger",
+  "version": "0.2.2",
+  "description": "A server for journal files created by DropLogger",
   "main": "index.js",
-  "repository": "https://github.com/goodevilgenius/journal-server",
+  "repository": "https://gitlab.com/danjones000/journal-server",
   "author": "Dan Jones <danjones@goodevilgenius.org>",
   "license": "MIT",
   "bin": "index.js",
   "dependencies": {
-    "bluebird": "^3.5.1",
-    "cors": "^2.8.4",
-    "express": "^4.16.3",
+    "bluebird": "^3.5.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "minimist": "^1.2.0"
   }
 }
