@@ -1,6 +1,6 @@
 {
   "name": "journal-server",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A server for journal files created by DropLogger",
   "main": "index.js",
   "repository": "https://gitlab.com/danjones000/journal-server",
